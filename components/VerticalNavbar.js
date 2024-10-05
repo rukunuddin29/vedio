@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link'; // Import Link for navigation
 import { Center, Tooltip, UnstyledButton, Stack, Button } from '@mantine/core';
-import { HiMenuAlt1 } from 'react-icons/hi'; // Keep the hamburger icon for now
+
 import classes from './VerticalNavbar.module.css'; // CSS module for styles
 
 // Replace the icons with image paths
@@ -44,7 +44,7 @@ export const VerticalNavbar = () => {
   return (
     <nav className={classes.navbar}>
       <Center>
-        <h1><HiMenuAlt1 /></h1> {/* Keep the hamburger icon */}
+        <h1>ham</h1> {/* Keep the hamburger icon */}
       </Center>
 
       <div className={classes.navbarMain}>
