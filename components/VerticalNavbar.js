@@ -1,17 +1,18 @@
 import React from 'react';
 import Link from 'next/link'; // Import Link for navigation
-import { Center, Tooltip, UnstyledButton, Stack } from '@mantine/core';
-import classes from './VerticalNavbar.module.css'; // Create a CSS module for styles if needed
+import { Center, Tooltip, UnstyledButton, Stack, Button } from '@mantine/core';
+import { FaHome, FaChartBar, FaFolderOpen, FaKey, FaUserCircle, FaLock, FaCogs, FaMusic } from 'react-icons/fa';
+import classes from './VerticalNavbar.module.css'; // CSS module for styles
 
-// Add paths to mockData
 const mockData = [
-  { icon: '/images/home-icon.png', label: 'Home', path: '/' }, // Home path
-  { icon: '/images/dashboard-icon.png', label: 'Dashboard', path: '/dashboard' }, // Dashboard path
-  { icon: '/images/analytics-icon.png', label: 'Analytics', path: '/analytics' }, // Analytics path
-  { icon: '/images/releases-icon.png', label: 'Releases', path: '/releases' }, // Releases path
-  { icon: '/images/account-icon.png', label: 'Account', path: '/account' }, // Account path
-  { icon: '/images/security-icon.png', label: 'Security', path: '/security' }, // Security path
-  { icon: '/images/settings-icon.png', label: 'Settings', path: '/settings' }, // Settings path
+  { icon: <FaHome />, label: 'Home', path: '/' },
+  { icon: <FaChartBar />, label: 'Pitcher', path: '/pitcher' },
+  { icon: <FaFolderOpen />, label: 'Splitter', path: '/splitter' },
+  { icon: <FaKey />, label: 'Key-BPM', path: '/key-bpm' },
+  { icon: <FaUserCircle />, label: 'Cutter', path: '/cutter' },
+  { icon: <FaLock />, label: 'Joiner', path: '/joiner' },
+  { icon: <FaCogs />, label: 'Recorder', path: '/recorder' },
+  { icon: <FaMusic />, label: 'Karaoke', path: '/karaoke' },
 ];
 
 const NavbarLink = ({ icon, label, active, onClick, path }) => {
@@ -19,7 +20,7 @@ const NavbarLink = ({ icon, label, active, onClick, path }) => {
     <Tooltip label={label} position="right" transitionProps={{ duration: 0 }}>
       <Link href={path} passHref>
         <UnstyledButton onClick={onClick} className={classes.link} data-active={active || undefined}>
-          <img src={icon} alt={label} style={{ width: '20px', height: '20px' }} />
+          {icon} {/* Render the icon directly */}
         </UnstyledButton>
       </Link>
     </Tooltip>
@@ -41,13 +42,20 @@ export const VerticalNavbar = () => {
   return (
     <nav className={classes.navbar}>
       <Center>
-        <h1>My App</h1>
+        <h1>hamburger</h1>
       </Center>
 
       <div className={classes.navbarMain}>
-        <Stack justify="center" gap={0}>
-          {links}
-        </Stack>
+        <div className={classes.iconContainer}>
+          <Stack justify="center" gap={0} spacing={5}>
+            {links}
+          </Stack>
+        </div>
+        
+        <div className={classes.buttonContainer}>
+          <Button variant="outline" className={classes.button}>Support</Button>
+          <Button variant="outline" className={classes.button}>Flag</Button>
+        </div>
       </div>
     </nav>
   );

@@ -1,5 +1,6 @@
 // pages/_app.js
 import { MantineProvider } from '@mantine/core';
+import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }) {
   return (

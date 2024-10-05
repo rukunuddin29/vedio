@@ -2,6 +2,7 @@
 import React from 'react';
 import VerticalNavbar from './VerticalNavbar'; // Adjust the path if necessary
 
+
 const MainLayout = ({ children }) => {
   return (
     <div style={{ display: 'flex' }}>

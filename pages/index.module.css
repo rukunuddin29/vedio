@@ -1,0 +1,39 @@
+/* styles/globals.css */
+.h1, .h2 { 
+    text-align: center; 
+    color: white; 
+    margin-bottom: 1rem; 
+}
+
+.h1 { 
+    font-size: 2.5rem; 
+}
+
+.h2 { 
+    font-size: 1.5rem; 
+    margin-bottom: 30px;
+}
+
+.img { 
+    max-width: 100%; 
+    height: auto; 
+}
+
+.data { 
+
+    margin:70px ; /* Center the data container */
+    padding: 30px; 
+    text-align: center; /* Center align text */
+    max-width: 800px; /* Optional: set a max width for better layout */
+}
+.customButton{
+    width: 200px;
+    height: 100px;
+    border-radius: 50px ;
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background: rgba(192, 128, 255, 0.268);
+    border: 3px solid rgba(187, 133, 248, 0.976) ;
+    margin-left: 400px;
+}
