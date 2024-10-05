@@ -1,18 +1,28 @@
 import React from 'react';
 import Link from 'next/link'; // Import Link for navigation
 import { Center, Tooltip, UnstyledButton, Stack, Button } from '@mantine/core';
-import { FaHome, FaChartBar, FaFolderOpen, FaKey, FaUserCircle, FaLock, FaCogs, FaMusic } from 'react-icons/fa';
+
+import { RiScissors2Line } from "react-icons/ri";
+import { TbPrismLight } from "react-icons/tb";
+import { BsSoundwave } from "react-icons/bs";
+import { PiDotsThreeOutlineFill } from "react-icons/pi";
+import { HiMenuAlt1 } from "react-icons/hi";
+import { TbBrandPrisma } from "react-icons/tb";
+import { GiJoin } from "react-icons/gi";
+import { FaMicrophone } from "react-icons/fa";
+import { BsDiscFill } from "react-icons/bs";
+
 import classes from './VerticalNavbar.module.css'; // CSS module for styles
 
 const mockData = [
-  { icon: <FaHome />, label: 'Home', path: '/' },
-  { icon: <FaChartBar />, label: 'Pitcher', path: '/pitcher' },
-  { icon: <FaFolderOpen />, label: 'Splitter', path: '/splitter' },
-  { icon: <FaKey />, label: 'Key-BPM', path: '/key-bpm' },
-  { icon: <FaUserCircle />, label: 'Cutter', path: '/cutter' },
-  { icon: <FaLock />, label: 'Joiner', path: '/joiner' },
-  { icon: <FaCogs />, label: 'Recorder', path: '/recorder' },
-  { icon: <FaMusic />, label: 'Karaoke', path: '/karaoke' },
+  { icon: <PiDotsThreeOutlineFill  />, label: 'Home', path: '/' },
+  { icon: <BsSoundwave/>, label: 'Pitcher', path: '/pitcher' },
+  { icon: <TbPrismLight />, label: 'Splitter', path: '/splitter' },
+  { icon: <TbBrandPrisma />, label: 'Key-BPM', path: '/key-bpm' },
+  { icon: <RiScissors2Line />, label: 'Cutter', path: '/cutter' },
+  { icon: <GiJoin />, label: 'Joiner', path: '/joiner' },
+  { icon: <FaMicrophone />, label: 'Recorder', path: '/recorder' },
+  { icon: <BsDiscFill />, label: 'Karaoke', path: '/karaoke' },
 ];
 
 const NavbarLink = ({ icon, label, active, onClick, path }) => {
@@ -42,7 +52,7 @@ export const VerticalNavbar = () => {
   return (
     <nav className={classes.navbar}>
       <Center>
-        <h1>hamburger</h1>
+        <h1><HiMenuAlt1 /></h1>
       </Center>
 
       <div className={classes.navbarMain}>
