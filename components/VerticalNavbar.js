@@ -1,28 +1,35 @@
 import React from 'react';
 import Link from 'next/link'; // Import Link for navigation
 import { Center, Tooltip, UnstyledButton, Stack, Button } from '@mantine/core';
-import { HiMenuAlt1 } from 'react-icons/hi'; // Keep the hamburger icon for now
+import { RiScissors2Line } from "react-icons/ri";
+import { TbPrismLight } from "react-icons/tb";
+import { BsSoundwave } from "react-icons/bs";
+import { PiDotsThreeOutlineFill } from "react-icons/pi";
+import { HiMenuAlt1 } from "react-icons/hi";
+import { TbBrandPrisma } from "react-icons/tb";
+import { GiJoin } from "react-icons/gi";
+import { FaMicrophone } from "react-icons/fa";
+import { BsDiscFill } from "react-icons/bs";
+
 import classes from './VerticalNavbar.module.css'; // CSS module for styles
 
-// Replace the icons with image paths
 const mockData = [
-  { icon: '/images/icons/home-black.png', label: 'Home', path: '/' },
-  { icon: '/images/icons/pitcher-black.png', label: 'Pitcher', path: '/pitcher' },
-  { icon: '/images/icons/splitter-black.png', label: 'Splitter', path: '/splitter' },
-  { icon: '/images/icons/key-bpm-black.png', label: 'Key-BPM', path: '/key-bpm' },
-  { icon: '/images/icons/cutter-black.png', label: 'Cutter', path: '/cutter' },
-  { icon: '/images/icons/joiner-black.png', label: 'Joiner', path: '/joiner' },
-  { icon: '/images/icons/recorder-black.png', label: 'Recorder', path: '/recorder' },
-  { icon: '/images/icons/karaoke-black.png', label: 'Karaoke', path: '/karaoke' },
+  { icon: <PiDotsThreeOutlineFill  />, label: 'Home', path: '/' },
+  { icon: <BsSoundwave/>, label: 'Pitcher', path: '/pitcher' },
+  { icon: <TbPrismLight />, label: 'Splitter', path: '/splitter' },
+  { icon: <TbBrandPrisma />, label: 'Key-BPM', path: '/key-bpm' },
+  { icon: <RiScissors2Line />, label: 'Cutter', path: '/cutter' },
+  { icon: <GiJoin />, label: 'Joiner', path: '/joiner' },
+  { icon: <FaMicrophone />, label: 'Recorder', path: '/recorder' },
+  { icon: <BsDiscFill />, label: 'Karaoke', path: '/karaoke' },
 ];
 
-// NavbarLink component that now renders images
 const NavbarLink = ({ icon, label, active, onClick, path }) => {
   return (
     <Tooltip label={label} position="right" transitionProps={{ duration: 0 }}>
       <Link href={path} passHref>
         <UnstyledButton onClick={onClick} className={classes.link} data-active={active || undefined}>
-          <img src={icon} alt={label} className={classes.iconImage} /> {/* Use the image here */}
+          {icon} {/* Render the icon directly */}
         </UnstyledButton>
       </Link>
     </Tooltip>
@@ -44,7 +51,7 @@ export const VerticalNavbar = () => {
   return (
     <nav className={classes.navbar}>
       <Center>
-        <h1><HiMenuAlt1 /></h1> {/* Keep the hamburger icon */}
+        <h1><HiMenuAlt1 /></h1>
       </Center>
 
       <div className={classes.navbarMain}>
