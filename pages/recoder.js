@@ -3,7 +3,7 @@ import MainLayout from '../components/MainLayout';
 const Recorder= () => {
   return (
     <MainLayout>
-      <h1>Key-BPM Page</h1>
+      <h1>recorder</h1>
       {/* Add more content here */}
     </MainLayout>
   );
