@@ -2,6 +2,7 @@
 width: 80px;
  background: #1d1d25;
  ;
+ position: fixed;
  color: white;
 
 }
@@ -30,6 +31,7 @@ width: 60px;
 .buttonContainer {
   display: flex;
   flex-direction: column; /* Stack buttons vertically */
+  margin-left: 10px;
 }
 
 .button {

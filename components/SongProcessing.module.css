@@ -1,0 +1,25 @@
+.textB {
+    border-left: 3px solid rgb(141, 59, 255); /* Retain the border for emphasis */
+    width: 90%; /* Use a relative width for responsiveness */
+    height: auto;
+    margin-left: 0; /* Remove left margin to start text from the left */
+    margin-top: 40px; /* Adjusted for a cleaner spacing */
+    background: rgba(63, 63, 63, 0.3); /* Slightly lighter background */
+    padding: 20px; /* Consistent padding */
+    font-size: 1.4rem; /* Retain font size */
+    line-height: 1.6; /* Improved readability */
+    border-radius: 5px; /* Add rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.header {
+    margin-left: 10px; /* Remove left margin */
+    width: full;
+    margin-top: 60px; /* Keep the top margin for spacing */
+    font-size: 2rem; /* Optional: Adjust font size for emphasis */
+    color: #ffffff; /* Set text color to improve contrast */
+}
+
+.padd {
+    margin-top: 20px; /* Slightly reduced margin for consistency */
+}
