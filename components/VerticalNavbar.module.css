@@ -37,6 +37,13 @@ width: 60px;
 .button {
   margin-top: 10px; /* Space above buttons */
  width: 60px;
- height: 50px;
+ height: 46px;
+ background: transparent;
+ border: none;
+ color: white;
 
+}
+.hamburger{
+  margin-left: 20px;
+  font-size: 1.6rem;
 }

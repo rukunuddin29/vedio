@@ -51,7 +51,7 @@ export const VerticalNavbar = () => {
   return (
     <nav className={classes.navbar}>
       <Center>
-        <h1><HiMenuAlt1 /></h1>
+        <h1 className={classes.hamburger}><HiMenuAlt1 /></h1>
       </Center>
 
       <div className={classes.navbarMain}>
@@ -63,7 +63,7 @@ export const VerticalNavbar = () => {
         
         <div className={classes.buttonContainer}>
           <Button variant="outline" className={classes.button}>Support</Button>
-          <Button variant="outline" className={classes.button}>Flag</Button>
+          <Button variant="outline" className={classes.button}>IN</Button>
         </div>
       </div>
     </nav>
